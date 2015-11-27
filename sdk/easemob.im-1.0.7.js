@@ -1955,7 +1955,7 @@ connection.prototype.getRoster = function(options) {
   }).c('query', {xmlns: 'jabber:iq:roster'});
 
     options = options || {};
-    suc = options.success || this.onRoster;
+    var suc = options.success || this.onRoster;
   var completeFn = function(ele){
     var rouster = [];
         var msgBodies = ele.getElementsByTagName("query");
